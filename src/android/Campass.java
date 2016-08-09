@@ -1,4 +1,4 @@
-package com.example.duynguyen.myapplication;
+package io.zapps.plugin.campass;
 
 
 import android.app.AlertDialog;

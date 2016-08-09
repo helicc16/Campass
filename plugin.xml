@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="io.zapps.plugin.alert"
+        id="io.zapps.plugin.campass"
         version="0.0.1">
     <name>Alert</name>
-      <description>A Cordova plugin that displays an alert popup dialog</description>
+      <description>A Cordova plugin that allow app user to use camera preview to take a bearing</description>
 
       <engines>
         <engine name="cordova" version=">=3.6.0" />
       </engines>
 
-    <js-module src="www/alert.js" name="Alert">
-    <clobbers target="Alert" />
+    <js-module src="www/campass.js" name="Campass">
+    <clobbers target="navigator.campass" />
   </js-module>
      <!-- android -->
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="Alert">
-        <param name="android-package" value="io.zapps.plugin.alert.Alert" />
+      <feature name="Campass">
+        <param name="android-package" value="io.zapps.plugin.campass.Campass" />
       </feature>
     </config-file>
-    <source-file src="src/android/Alert.java" target-dir="src/io/zapps/plugin/alert" />
+    <source-file src="src/android/Campass.java" target-dir="src/io/zapps/plugin/campass" />
   </platform>
 
         

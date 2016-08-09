@@ -43,7 +43,7 @@ public class Campass extends CordovaPlugin {
 
             String result = data.getStringExtra("BEARING");
             //this.azimuthSet = result;
-            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result );
+            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result ));
         }
 
     }

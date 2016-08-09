@@ -32,6 +32,11 @@ public class Campass extends CordovaPlugin {
             this.cordova.startActivityForResult((CordovaPlugin) this, myIntent, 2);
             return true;
         }
+        else if (action.equals("echo")){
+            String text = "Hello World";
+            echoAString (text, callbackContext);
+            return true;
+        }
         return false;
     }
 
@@ -46,6 +51,13 @@ public class Campass extends CordovaPlugin {
             callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result ));
         }
 
+    }
+    public void echoAString (String message, CallbackContext callbackContext) {
+        if (message != null && message.length() > 0) { 
+            callbackContext.success(message);
+        } else {
+            callbackContext.error("Expected one non-empty string argument.");
+        }
     }
     private synchronized void alert(final String title,
                                     final String message,

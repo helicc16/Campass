@@ -20,5 +20,8 @@ module.exports = {
         "Campass",
         "setAzimuth",
         []);
+    },
+    getAString: function (successCallback) {
+        cordova.exec(successCallback, null, "Campass", "echo", []);
     }
 };

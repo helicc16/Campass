@@ -38,7 +38,7 @@ public class Campass extends CordovaPlugin {
 
             //Using Intent to start my own Camera Compass app
             Intent myIntent = new Intent();
-            myIntent.setAction("io.zapps.camera14.CAMPASS");
+            myIntent.setAction("io.zapps.camera16.CAMPASS");
             this.cordova.setActivityResultCallback(this);
             this.cordova.getActivity().startActivityForResult( myIntent, 2);
             this.myCallbackContext = callbackContext;
